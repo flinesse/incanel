@@ -1,14 +1,14 @@
+from enum import Enum
 from dataclasses import dataclass
-from enum import Enum, auto
 from collections import deque
 
 class MetricType(Enum):
-    """Measurement types with associated normalization bounds and default weights"""
+    """Metric types with associated normalization bounds and default weights"""
     # min_val, max_val, higher_is_better, default_weight
-    RTT = (10.0, 800.0, False, 0.30)  # ms
-    THROUGHPUT = (0.0, 200.0, True, 0.25)  # Mb/s
+    RTT = (10.0, 800.0, False, 0.30)        # ms
+    THROUGHPUT = (0.0, 200.0, True, 0.25)   # Mb/s
     PACKET_LOSS = (0.0, 30.0, False, 0.30)  # percent
-    JITTER = (0.0, 200.0, False, 0.15)  # ms
+    JITTER = (0.0, 200.0, False, 0.15)      # ms
 
     def __init__(self, min_val, max_val, higher_is_better, weight):
         self.min_val = min_val
