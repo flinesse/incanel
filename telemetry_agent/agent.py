@@ -1,5 +1,5 @@
-from sampling import Sample, MetricType
-from interface import Status, Interface
+from .sampling import MetricType, Sample
+from .interface import Status, Interface
 
 # [config] Hysteresis parameters
 THRESHOLDS = {

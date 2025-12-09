@@ -1,0 +1,16 @@
+[project]
+name = "incanel"
+version = "0.1.0"
+description = "Hoplynk Telemetry Agent Work Sample"
+authors = [{name = "Joshua Lin"}]
+requires-python = ">=3.10"
+
+[project.scripts]
+telemetry_agent = "telemetry_agent.main:main"
+
+[tool.setuptools]
+packages = ["telemetry_agent"]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"

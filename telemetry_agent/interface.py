@@ -1,6 +1,6 @@
 from typing import Self
 from enum import Enum
-from sampling import SampleWindow
+from .sampling import SampleWindow
 
 
 class Status(Enum):

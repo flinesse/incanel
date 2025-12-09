@@ -2,6 +2,7 @@ from enum import Enum
 from dataclasses import dataclass
 from collections import deque
 
+
 class MetricType(Enum):
     """Metric types with associated normalization bounds and default weights"""
     # min_val, max_val, higher_is_better, default_weight
@@ -54,7 +55,6 @@ class Sample:
         return self.metrics[metric_type]
 
 class SampleWindow:
-
     def __init__(self, capacity: int = 45):
         self.samples = deque(maxlen=capacity)
         # self.win_sum = 0
